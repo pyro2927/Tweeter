@@ -1,0 +1,597 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D3623260D0F684500981E51 /* TweeterAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* TweeterAppDelegate.m */; };
+		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
+		2899E5220DE3E06400AC0155 /* TweeterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2899E5210DE3E06400AC0155 /* TweeterViewController.xib */; };
+		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
+		28D7ACF80DDB3853001CB0EB /* TweeterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* TweeterViewController.m */; };
+		D82D0B8A10A9D12E00020AB1 /* Tweeter.m in Sources */ = {isa = PBXBuildFile; fileRef = D82D0B8910A9D12E00020AB1 /* Tweeter.m */; };
+		D82D0B9A10A9D13A00020AB1 /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = D82D0B8D10A9D13A00020AB1 /* ASIAuthenticationDialog.m */; };
+		D82D0B9B10A9D13A00020AB1 /* ASIFormDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D82D0B8F10A9D13A00020AB1 /* ASIFormDataRequest.m */; };
+		D82D0B9C10A9D13A00020AB1 /* ASIHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D82D0B9110A9D13A00020AB1 /* ASIHTTPRequest.m */; };
+		D82D0B9D10A9D13A00020AB1 /* ASIInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = D82D0B9310A9D13A00020AB1 /* ASIInputStream.m */; };
+		D82D0B9E10A9D13A00020AB1 /* ASINetworkQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = D82D0B9510A9D13A00020AB1 /* ASINetworkQueue.m */; };
+		D82D0B9F10A9D13A00020AB1 /* ASINSStringAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D82D0B9710A9D13A00020AB1 /* ASINSStringAdditions.m */; };
+		D82D0BA010A9D13A00020AB1 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = D82D0B9910A9D13A00020AB1 /* Reachability.m */; };
+		D82D0BAE10A9D14500020AB1 /* SFHFKeychainUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = D82D0BA410A9D14500020AB1 /* SFHFKeychainUtils.m */; };
+		D82D0BDD10A9D3E000020AB1 /* libz.1.2.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D82D0BDC10A9D3E000020AB1 /* libz.1.2.3.dylib */; };
+		D82D0BE710A9D52200020AB1 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D82D0BE610A9D52200020AB1 /* Security.framework */; };
+		D82D0BED10A9D53700020AB1 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D82D0BEC10A9D53700020AB1 /* CFNetwork.framework */; };
+		D82D0BF310A9D54D00020AB1 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D82D0BF210A9D54D00020AB1 /* SystemConfiguration.framework */; };
+		D82D0CB610A9E1CD00020AB1 /* config in Resources */ = {isa = PBXBuildFile; fileRef = D82D0C8D10A9E1CD00020AB1 /* config */; };
+		D82D0CB710A9E1CD00020AB1 /* description in Resources */ = {isa = PBXBuildFile; fileRef = D82D0C8E10A9E1CD00020AB1 /* description */; };
+		D82D0CB810A9E1CD00020AB1 /* HEAD in Resources */ = {isa = PBXBuildFile; fileRef = D82D0C8F10A9E1CD00020AB1 /* HEAD */; };
+		D82D0CB910A9E1CD00020AB1 /* applypatch-msg.sample in Resources */ = {isa = PBXBuildFile; fileRef = D82D0C9110A9E1CD00020AB1 /* applypatch-msg.sample */; };
+		D82D0CBA10A9E1CD00020AB1 /* commit-msg.sample in Resources */ = {isa = PBXBuildFile; fileRef = D82D0C9210A9E1CD00020AB1 /* commit-msg.sample */; };
+		D82D0CBB10A9E1CD00020AB1 /* post-commit.sample in Resources */ = {isa = PBXBuildFile; fileRef = D82D0C9310A9E1CD00020AB1 /* post-commit.sample */; };
+		D82D0CBC10A9E1CD00020AB1 /* post-receive.sample in Resources */ = {isa = PBXBuildFile; fileRef = D82D0C9410A9E1CD00020AB1 /* post-receive.sample */; };
+		D82D0CBD10A9E1CD00020AB1 /* post-update.sample in Resources */ = {isa = PBXBuildFile; fileRef = D82D0C9510A9E1CD00020AB1 /* post-update.sample */; };
+		D82D0CBE10A9E1CD00020AB1 /* pre-applypatch.sample in Resources */ = {isa = PBXBuildFile; fileRef = D82D0C9610A9E1CD00020AB1 /* pre-applypatch.sample */; };
+		D82D0CBF10A9E1CD00020AB1 /* pre-commit.sample in Resources */ = {isa = PBXBuildFile; fileRef = D82D0C9710A9E1CD00020AB1 /* pre-commit.sample */; };
+		D82D0CC010A9E1CD00020AB1 /* pre-rebase.sample in Resources */ = {isa = PBXBuildFile; fileRef = D82D0C9810A9E1CD00020AB1 /* pre-rebase.sample */; };
+		D82D0CC110A9E1CD00020AB1 /* prepare-commit-msg.sample in Resources */ = {isa = PBXBuildFile; fileRef = D82D0C9910A9E1CD00020AB1 /* prepare-commit-msg.sample */; };
+		D82D0CC210A9E1CD00020AB1 /* update.sample in Resources */ = {isa = PBXBuildFile; fileRef = D82D0C9A10A9E1CD00020AB1 /* update.sample */; };
+		D82D0CC310A9E1CD00020AB1 /* index in Resources */ = {isa = PBXBuildFile; fileRef = D82D0C9B10A9E1CD00020AB1 /* index */; };
+		D82D0CC410A9E1CD00020AB1 /* exclude in Resources */ = {isa = PBXBuildFile; fileRef = D82D0C9D10A9E1CD00020AB1 /* exclude */; };
+		D82D0CC510A9E1CD00020AB1 /* HEAD in Resources */ = {isa = PBXBuildFile; fileRef = D82D0C9F10A9E1CD00020AB1 /* HEAD */; };
+		D82D0CC610A9E1CD00020AB1 /* master in Resources */ = {isa = PBXBuildFile; fileRef = D82D0CA210A9E1CD00020AB1 /* master */; };
+		D82D0CC710A9E1CD00020AB1 /* HEAD in Resources */ = {isa = PBXBuildFile; fileRef = D82D0CA510A9E1CD00020AB1 /* HEAD */; };
+		D82D0CC810A9E1CD00020AB1 /* pack-f2c9b6f1cff2bef4e07d5501d03951e8ca8cc00c.idx in Resources */ = {isa = PBXBuildFile; fileRef = D82D0CA910A9E1CD00020AB1 /* pack-f2c9b6f1cff2bef4e07d5501d03951e8ca8cc00c.idx */; };
+		D82D0CC910A9E1CD00020AB1 /* pack-f2c9b6f1cff2bef4e07d5501d03951e8ca8cc00c.pack in Resources */ = {isa = PBXBuildFile; fileRef = D82D0CAA10A9E1CD00020AB1 /* pack-f2c9b6f1cff2bef4e07d5501d03951e8ca8cc00c.pack */; };
+		D82D0CCA10A9E1CD00020AB1 /* packed-refs in Resources */ = {isa = PBXBuildFile; fileRef = D82D0CAB10A9E1CD00020AB1 /* packed-refs */; };
+		D82D0CCB10A9E1CD00020AB1 /* master in Resources */ = {isa = PBXBuildFile; fileRef = D82D0CAE10A9E1CD00020AB1 /* master */; };
+		D82D0CCC10A9E1CD00020AB1 /* HEAD in Resources */ = {isa = PBXBuildFile; fileRef = D82D0CB110A9E1CD00020AB1 /* HEAD */; };
+		D82D0CCD10A9E1CD00020AB1 /* CCJSONParser.m in Sources */ = {isa = PBXBuildFile; fileRef = D82D0CB410A9E1CD00020AB1 /* CCJSONParser.m */; };
+		D82D0CCE10A9E1CD00020AB1 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = D82D0CB510A9E1CD00020AB1 /* README.md */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D3623240D0F684500981E51 /* TweeterAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TweeterAppDelegate.h; sourceTree = "<group>"; };
+		1D3623250D0F684500981E51 /* TweeterAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TweeterAppDelegate.m; sourceTree = "<group>"; };
+		1D6058910D05DD3D006BFB54 /* Tweeter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tweeter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		2899E5210DE3E06400AC0155 /* TweeterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TweeterViewController.xib; sourceTree = "<group>"; };
+		28AD733E0D9D9553002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		28D7ACF60DDB3853001CB0EB /* TweeterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TweeterViewController.h; sourceTree = "<group>"; };
+		28D7ACF70DDB3853001CB0EB /* TweeterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TweeterViewController.m; sourceTree = "<group>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		32CA4F630368D1EE00C91783 /* Tweeter_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tweeter_Prefix.pch; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* Tweeter-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Tweeter-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		D82D0B8810A9D12E00020AB1 /* Tweeter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tweeter.h; sourceTree = SOURCE_ROOT; };
+		D82D0B8910A9D12E00020AB1 /* Tweeter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tweeter.m; sourceTree = SOURCE_ROOT; };
+		D82D0B8C10A9D13A00020AB1 /* ASIAuthenticationDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIAuthenticationDialog.h; sourceTree = "<group>"; };
+		D82D0B8D10A9D13A00020AB1 /* ASIAuthenticationDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIAuthenticationDialog.m; sourceTree = "<group>"; };
+		D82D0B8E10A9D13A00020AB1 /* ASIFormDataRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIFormDataRequest.h; sourceTree = "<group>"; };
+		D82D0B8F10A9D13A00020AB1 /* ASIFormDataRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIFormDataRequest.m; sourceTree = "<group>"; };
+		D82D0B9010A9D13A00020AB1 /* ASIHTTPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIHTTPRequest.h; sourceTree = "<group>"; };
+		D82D0B9110A9D13A00020AB1 /* ASIHTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIHTTPRequest.m; sourceTree = "<group>"; };
+		D82D0B9210A9D13A00020AB1 /* ASIInputStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIInputStream.h; sourceTree = "<group>"; };
+		D82D0B9310A9D13A00020AB1 /* ASIInputStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIInputStream.m; sourceTree = "<group>"; };
+		D82D0B9410A9D13A00020AB1 /* ASINetworkQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASINetworkQueue.h; sourceTree = "<group>"; };
+		D82D0B9510A9D13A00020AB1 /* ASINetworkQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASINetworkQueue.m; sourceTree = "<group>"; };
+		D82D0B9610A9D13A00020AB1 /* ASINSStringAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASINSStringAdditions.h; sourceTree = "<group>"; };
+		D82D0B9710A9D13A00020AB1 /* ASINSStringAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASINSStringAdditions.m; sourceTree = "<group>"; };
+		D82D0B9810A9D13A00020AB1 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		D82D0B9910A9D13A00020AB1 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		D82D0BA310A9D14500020AB1 /* SFHFKeychainUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFHFKeychainUtils.h; sourceTree = "<group>"; };
+		D82D0BA410A9D14500020AB1 /* SFHFKeychainUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFHFKeychainUtils.m; sourceTree = "<group>"; };
+		D82D0BDC10A9D3E000020AB1 /* libz.1.2.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.3.dylib; path = usr/lib/libz.1.2.3.dylib; sourceTree = SDKROOT; };
+		D82D0BE610A9D52200020AB1 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		D82D0BEC10A9D53700020AB1 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		D82D0BF210A9D54D00020AB1 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		D82D0C8D10A9E1CD00020AB1 /* config */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = config; sourceTree = "<group>"; };
+		D82D0C8E10A9E1CD00020AB1 /* description */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = description; sourceTree = "<group>"; };
+		D82D0C8F10A9E1CD00020AB1 /* HEAD */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = HEAD; sourceTree = "<group>"; };
+		D82D0C9110A9E1CD00020AB1 /* applypatch-msg.sample */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "applypatch-msg.sample"; sourceTree = "<group>"; };
+		D82D0C9210A9E1CD00020AB1 /* commit-msg.sample */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "commit-msg.sample"; sourceTree = "<group>"; };
+		D82D0C9310A9E1CD00020AB1 /* post-commit.sample */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "post-commit.sample"; sourceTree = "<group>"; };
+		D82D0C9410A9E1CD00020AB1 /* post-receive.sample */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "post-receive.sample"; sourceTree = "<group>"; };
+		D82D0C9510A9E1CD00020AB1 /* post-update.sample */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "post-update.sample"; sourceTree = "<group>"; };
+		D82D0C9610A9E1CD00020AB1 /* pre-applypatch.sample */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "pre-applypatch.sample"; sourceTree = "<group>"; };
+		D82D0C9710A9E1CD00020AB1 /* pre-commit.sample */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "pre-commit.sample"; sourceTree = "<group>"; };
+		D82D0C9810A9E1CD00020AB1 /* pre-rebase.sample */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "pre-rebase.sample"; sourceTree = "<group>"; };
+		D82D0C9910A9E1CD00020AB1 /* prepare-commit-msg.sample */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "prepare-commit-msg.sample"; sourceTree = "<group>"; };
+		D82D0C9A10A9E1CD00020AB1 /* update.sample */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = update.sample; sourceTree = "<group>"; };
+		D82D0C9B10A9E1CD00020AB1 /* index */ = {isa = PBXFileReference; lastKnownFileType = file; path = index; sourceTree = "<group>"; };
+		D82D0C9D10A9E1CD00020AB1 /* exclude */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = exclude; sourceTree = "<group>"; };
+		D82D0C9F10A9E1CD00020AB1 /* HEAD */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = HEAD; sourceTree = "<group>"; };
+		D82D0CA210A9E1CD00020AB1 /* master */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = master; sourceTree = "<group>"; };
+		D82D0CA510A9E1CD00020AB1 /* HEAD */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = HEAD; sourceTree = "<group>"; };
+		D82D0CA910A9E1CD00020AB1 /* pack-f2c9b6f1cff2bef4e07d5501d03951e8ca8cc00c.idx */ = {isa = PBXFileReference; lastKnownFileType = file; path = "pack-f2c9b6f1cff2bef4e07d5501d03951e8ca8cc00c.idx"; sourceTree = "<group>"; };
+		D82D0CAA10A9E1CD00020AB1 /* pack-f2c9b6f1cff2bef4e07d5501d03951e8ca8cc00c.pack */ = {isa = PBXFileReference; lastKnownFileType = file; path = "pack-f2c9b6f1cff2bef4e07d5501d03951e8ca8cc00c.pack"; sourceTree = "<group>"; };
+		D82D0CAB10A9E1CD00020AB1 /* packed-refs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "packed-refs"; sourceTree = "<group>"; };
+		D82D0CAE10A9E1CD00020AB1 /* master */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = master; sourceTree = "<group>"; };
+		D82D0CB110A9E1CD00020AB1 /* HEAD */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = HEAD; sourceTree = "<group>"; };
+		D82D0CB310A9E1CD00020AB1 /* CCJSONParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCJSONParser.h; sourceTree = "<group>"; };
+		D82D0CB410A9E1CD00020AB1 /* CCJSONParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCJSONParser.m; sourceTree = "<group>"; };
+		D82D0CB510A9E1CD00020AB1 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
+				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
+				288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */,
+				D82D0BDD10A9D3E000020AB1 /* libz.1.2.3.dylib in Frameworks */,
+				D82D0BE710A9D52200020AB1 /* Security.framework in Frameworks */,
+				D82D0BED10A9D53700020AB1 /* CFNetwork.framework in Frameworks */,
+				D82D0BF310A9D54D00020AB1 /* SystemConfiguration.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				D82D0C8A10A9E1CD00020AB1 /* CCJSON */,
+				D82D0B8B10A9D13A00020AB1 /* ASI */,
+				D82D0B8710A9D11F00020AB1 /* Tweeter */,
+				D82D0BA110A9D14500020AB1 /* scifi */,
+				1D3623240D0F684500981E51 /* TweeterAppDelegate.h */,
+				1D3623250D0F684500981E51 /* TweeterAppDelegate.m */,
+				28D7ACF60DDB3853001CB0EB /* TweeterViewController.h */,
+				28D7ACF70DDB3853001CB0EB /* TweeterViewController.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* Tweeter.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = CustomTemplate;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32CA4F630368D1EE00C91783 /* Tweeter_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2899E5210DE3E06400AC0155 /* TweeterViewController.xib */,
+				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
+				8D1107310486CEB800E47090 /* Tweeter-Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D82D0BDC10A9D3E000020AB1 /* libz.1.2.3.dylib */,
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
+				288765A40DF7441C002DB57D /* CoreGraphics.framework */,
+				D82D0BE610A9D52200020AB1 /* Security.framework */,
+				D82D0BEC10A9D53700020AB1 /* CFNetwork.framework */,
+				D82D0BF210A9D54D00020AB1 /* SystemConfiguration.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D82D0B8710A9D11F00020AB1 /* Tweeter */ = {
+			isa = PBXGroup;
+			children = (
+				D82D0B8810A9D12E00020AB1 /* Tweeter.h */,
+				D82D0B8910A9D12E00020AB1 /* Tweeter.m */,
+			);
+			name = Tweeter;
+			sourceTree = "<group>";
+		};
+		D82D0B8B10A9D13A00020AB1 /* ASI */ = {
+			isa = PBXGroup;
+			children = (
+				D82D0B8C10A9D13A00020AB1 /* ASIAuthenticationDialog.h */,
+				D82D0B8D10A9D13A00020AB1 /* ASIAuthenticationDialog.m */,
+				D82D0B8E10A9D13A00020AB1 /* ASIFormDataRequest.h */,
+				D82D0B8F10A9D13A00020AB1 /* ASIFormDataRequest.m */,
+				D82D0B9010A9D13A00020AB1 /* ASIHTTPRequest.h */,
+				D82D0B9110A9D13A00020AB1 /* ASIHTTPRequest.m */,
+				D82D0B9210A9D13A00020AB1 /* ASIInputStream.h */,
+				D82D0B9310A9D13A00020AB1 /* ASIInputStream.m */,
+				D82D0B9410A9D13A00020AB1 /* ASINetworkQueue.h */,
+				D82D0B9510A9D13A00020AB1 /* ASINetworkQueue.m */,
+				D82D0B9610A9D13A00020AB1 /* ASINSStringAdditions.h */,
+				D82D0B9710A9D13A00020AB1 /* ASINSStringAdditions.m */,
+				D82D0B9810A9D13A00020AB1 /* Reachability.h */,
+				D82D0B9910A9D13A00020AB1 /* Reachability.m */,
+			);
+			path = ASI;
+			sourceTree = SOURCE_ROOT;
+		};
+		D82D0BA110A9D14500020AB1 /* scifi */ = {
+			isa = PBXGroup;
+			children = (
+				D82D0BA210A9D14500020AB1 /* security */,
+			);
+			path = scifi;
+			sourceTree = SOURCE_ROOT;
+		};
+		D82D0BA210A9D14500020AB1 /* security */ = {
+			isa = PBXGroup;
+			children = (
+				D82D0BA310A9D14500020AB1 /* SFHFKeychainUtils.h */,
+				D82D0BA410A9D14500020AB1 /* SFHFKeychainUtils.m */,
+			);
+			path = security;
+			sourceTree = "<group>";
+		};
+		D82D0C8A10A9E1CD00020AB1 /* CCJSON */ = {
+			isa = PBXGroup;
+			children = (
+				D82D0C8B10A9E1CD00020AB1 /* .git */,
+				D82D0CB310A9E1CD00020AB1 /* CCJSONParser.h */,
+				D82D0CB410A9E1CD00020AB1 /* CCJSONParser.m */,
+				D82D0CB510A9E1CD00020AB1 /* README.md */,
+			);
+			path = CCJSON;
+			sourceTree = SOURCE_ROOT;
+		};
+		D82D0C8B10A9E1CD00020AB1 /* .git */ = {
+			isa = PBXGroup;
+			children = (
+				D82D0C8C10A9E1CD00020AB1 /* branches */,
+				D82D0C8D10A9E1CD00020AB1 /* config */,
+				D82D0C8E10A9E1CD00020AB1 /* description */,
+				D82D0C8F10A9E1CD00020AB1 /* HEAD */,
+				D82D0C9010A9E1CD00020AB1 /* hooks */,
+				D82D0C9B10A9E1CD00020AB1 /* index */,
+				D82D0C9C10A9E1CD00020AB1 /* info */,
+				D82D0C9E10A9E1CD00020AB1 /* logs */,
+				D82D0CA610A9E1CD00020AB1 /* objects */,
+				D82D0CAB10A9E1CD00020AB1 /* packed-refs */,
+				D82D0CAC10A9E1CD00020AB1 /* refs */,
+			);
+			path = .git;
+			sourceTree = "<group>";
+		};
+		D82D0C8C10A9E1CD00020AB1 /* branches */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = branches;
+			sourceTree = "<group>";
+		};
+		D82D0C9010A9E1CD00020AB1 /* hooks */ = {
+			isa = PBXGroup;
+			children = (
+				D82D0C9110A9E1CD00020AB1 /* applypatch-msg.sample */,
+				D82D0C9210A9E1CD00020AB1 /* commit-msg.sample */,
+				D82D0C9310A9E1CD00020AB1 /* post-commit.sample */,
+				D82D0C9410A9E1CD00020AB1 /* post-receive.sample */,
+				D82D0C9510A9E1CD00020AB1 /* post-update.sample */,
+				D82D0C9610A9E1CD00020AB1 /* pre-applypatch.sample */,
+				D82D0C9710A9E1CD00020AB1 /* pre-commit.sample */,
+				D82D0C9810A9E1CD00020AB1 /* pre-rebase.sample */,
+				D82D0C9910A9E1CD00020AB1 /* prepare-commit-msg.sample */,
+				D82D0C9A10A9E1CD00020AB1 /* update.sample */,
+			);
+			path = hooks;
+			sourceTree = "<group>";
+		};
+		D82D0C9C10A9E1CD00020AB1 /* info */ = {
+			isa = PBXGroup;
+			children = (
+				D82D0C9D10A9E1CD00020AB1 /* exclude */,
+			);
+			path = info;
+			sourceTree = "<group>";
+		};
+		D82D0C9E10A9E1CD00020AB1 /* logs */ = {
+			isa = PBXGroup;
+			children = (
+				D82D0C9F10A9E1CD00020AB1 /* HEAD */,
+				D82D0CA010A9E1CD00020AB1 /* refs */,
+			);
+			path = logs;
+			sourceTree = "<group>";
+		};
+		D82D0CA010A9E1CD00020AB1 /* refs */ = {
+			isa = PBXGroup;
+			children = (
+				D82D0CA110A9E1CD00020AB1 /* heads */,
+				D82D0CA310A9E1CD00020AB1 /* remotes */,
+			);
+			path = refs;
+			sourceTree = "<group>";
+		};
+		D82D0CA110A9E1CD00020AB1 /* heads */ = {
+			isa = PBXGroup;
+			children = (
+				D82D0CA210A9E1CD00020AB1 /* master */,
+			);
+			path = heads;
+			sourceTree = "<group>";
+		};
+		D82D0CA310A9E1CD00020AB1 /* remotes */ = {
+			isa = PBXGroup;
+			children = (
+				D82D0CA410A9E1CD00020AB1 /* origin */,
+			);
+			path = remotes;
+			sourceTree = "<group>";
+		};
+		D82D0CA410A9E1CD00020AB1 /* origin */ = {
+			isa = PBXGroup;
+			children = (
+				D82D0CA510A9E1CD00020AB1 /* HEAD */,
+			);
+			path = origin;
+			sourceTree = "<group>";
+		};
+		D82D0CA610A9E1CD00020AB1 /* objects */ = {
+			isa = PBXGroup;
+			children = (
+				D82D0CA710A9E1CD00020AB1 /* info */,
+				D82D0CA810A9E1CD00020AB1 /* pack */,
+			);
+			path = objects;
+			sourceTree = "<group>";
+		};
+		D82D0CA710A9E1CD00020AB1 /* info */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = info;
+			sourceTree = "<group>";
+		};
+		D82D0CA810A9E1CD00020AB1 /* pack */ = {
+			isa = PBXGroup;
+			children = (
+				D82D0CA910A9E1CD00020AB1 /* pack-f2c9b6f1cff2bef4e07d5501d03951e8ca8cc00c.idx */,
+				D82D0CAA10A9E1CD00020AB1 /* pack-f2c9b6f1cff2bef4e07d5501d03951e8ca8cc00c.pack */,
+			);
+			path = pack;
+			sourceTree = "<group>";
+		};
+		D82D0CAC10A9E1CD00020AB1 /* refs */ = {
+			isa = PBXGroup;
+			children = (
+				D82D0CAD10A9E1CD00020AB1 /* heads */,
+				D82D0CAF10A9E1CD00020AB1 /* remotes */,
+				D82D0CB210A9E1CD00020AB1 /* tags */,
+			);
+			path = refs;
+			sourceTree = "<group>";
+		};
+		D82D0CAD10A9E1CD00020AB1 /* heads */ = {
+			isa = PBXGroup;
+			children = (
+				D82D0CAE10A9E1CD00020AB1 /* master */,
+			);
+			path = heads;
+			sourceTree = "<group>";
+		};
+		D82D0CAF10A9E1CD00020AB1 /* remotes */ = {
+			isa = PBXGroup;
+			children = (
+				D82D0CB010A9E1CD00020AB1 /* origin */,
+			);
+			path = remotes;
+			sourceTree = "<group>";
+		};
+		D82D0CB010A9E1CD00020AB1 /* origin */ = {
+			isa = PBXGroup;
+			children = (
+				D82D0CB110A9E1CD00020AB1 /* HEAD */,
+			);
+			path = origin;
+			sourceTree = "<group>";
+		};
+		D82D0CB210A9E1CD00020AB1 /* tags */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = tags;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* Tweeter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "Tweeter" */;
+			buildPhases = (
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Tweeter;
+			productName = Tweeter;
+			productReference = 1D6058910D05DD3D006BFB54 /* Tweeter.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Tweeter" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* Tweeter */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
+				2899E5220DE3E06400AC0155 /* TweeterViewController.xib in Resources */,
+				D82D0CB610A9E1CD00020AB1 /* config in Resources */,
+				D82D0CB710A9E1CD00020AB1 /* description in Resources */,
+				D82D0CB810A9E1CD00020AB1 /* HEAD in Resources */,
+				D82D0CB910A9E1CD00020AB1 /* applypatch-msg.sample in Resources */,
+				D82D0CBA10A9E1CD00020AB1 /* commit-msg.sample in Resources */,
+				D82D0CBB10A9E1CD00020AB1 /* post-commit.sample in Resources */,
+				D82D0CBC10A9E1CD00020AB1 /* post-receive.sample in Resources */,
+				D82D0CBD10A9E1CD00020AB1 /* post-update.sample in Resources */,
+				D82D0CBE10A9E1CD00020AB1 /* pre-applypatch.sample in Resources */,
+				D82D0CBF10A9E1CD00020AB1 /* pre-commit.sample in Resources */,
+				D82D0CC010A9E1CD00020AB1 /* pre-rebase.sample in Resources */,
+				D82D0CC110A9E1CD00020AB1 /* prepare-commit-msg.sample in Resources */,
+				D82D0CC210A9E1CD00020AB1 /* update.sample in Resources */,
+				D82D0CC310A9E1CD00020AB1 /* index in Resources */,
+				D82D0CC410A9E1CD00020AB1 /* exclude in Resources */,
+				D82D0CC510A9E1CD00020AB1 /* HEAD in Resources */,
+				D82D0CC610A9E1CD00020AB1 /* master in Resources */,
+				D82D0CC710A9E1CD00020AB1 /* HEAD in Resources */,
+				D82D0CC810A9E1CD00020AB1 /* pack-f2c9b6f1cff2bef4e07d5501d03951e8ca8cc00c.idx in Resources */,
+				D82D0CC910A9E1CD00020AB1 /* pack-f2c9b6f1cff2bef4e07d5501d03951e8ca8cc00c.pack in Resources */,
+				D82D0CCA10A9E1CD00020AB1 /* packed-refs in Resources */,
+				D82D0CCB10A9E1CD00020AB1 /* master in Resources */,
+				D82D0CCC10A9E1CD00020AB1 /* HEAD in Resources */,
+				D82D0CCE10A9E1CD00020AB1 /* README.md in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
+				1D3623260D0F684500981E51 /* TweeterAppDelegate.m in Sources */,
+				28D7ACF80DDB3853001CB0EB /* TweeterViewController.m in Sources */,
+				D82D0B8A10A9D12E00020AB1 /* Tweeter.m in Sources */,
+				D82D0B9A10A9D13A00020AB1 /* ASIAuthenticationDialog.m in Sources */,
+				D82D0B9B10A9D13A00020AB1 /* ASIFormDataRequest.m in Sources */,
+				D82D0B9C10A9D13A00020AB1 /* ASIHTTPRequest.m in Sources */,
+				D82D0B9D10A9D13A00020AB1 /* ASIInputStream.m in Sources */,
+				D82D0B9E10A9D13A00020AB1 /* ASINetworkQueue.m in Sources */,
+				D82D0B9F10A9D13A00020AB1 /* ASINSStringAdditions.m in Sources */,
+				D82D0BA010A9D13A00020AB1 /* Reachability.m in Sources */,
+				D82D0BAE10A9D14500020AB1 /* SFHFKeychainUtils.m in Sources */,
+				D82D0CCD10A9E1CD00020AB1 /* CCJSONParser.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Tweeter_Prefix.pch;
+				INFOPLIST_FILE = "Tweeter-Info.plist";
+				PRODUCT_NAME = Tweeter;
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Tweeter_Prefix.pch;
+				INFOPLIST_FILE = "Tweeter-Info.plist";
+				PRODUCT_NAME = Tweeter;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = iphoneos3.1.2;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = iphoneos3.1.2;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "Tweeter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug */,
+				1D6058950D05DD3E006BFB54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Tweeter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

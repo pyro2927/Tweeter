@@ -8,19 +8,18 @@
 
 #import "Tweeter.h"
 
-
 @implementation Tweeter
+@synthesize user, pass, results;
 
-
-@synthesize user, pass;
-
--(void) init{
+-(id) init{
 	userDefaults = [[NSUserDefaults standardUserDefaults] retain];
 	authenticated = FALSE;
+	return self;
 }
+
 //Validates username and password
 //Returns TRUE if valid, else FALSE
--(BOOL)validUsername:(NSString *)username password:(NSString *)password{
+-(void)loginWithUsername:(NSString *)username password:(NSString *)password{
 	//setup request wtih URL
 	NSURL *url = [NSURL URLWithString:@"http://twitter.com/account/verify_credentials.json"];
 	ASIFormDataRequest *request = [[[ASIFormDataRequest alloc] initWithURL:url] autorelease];
@@ -32,7 +31,6 @@
 	user = username;
 	pass = password;
 	NSString *dataStr = [NSString stringWithFormat:@"%@:%@", user, pass];
-	NSLog(@"Username/pass: %@",dataStr);
 	
 	//encode
 	NSData *encodeData = [dataStr dataUsingEncoding:NSUTF8StringEncoding];
@@ -41,25 +39,18 @@
 	//set memory size
 	memset(encodeArray, '\0', sizeof(encodeArray));
 	
-	NSLog(@"Mem set");
 	// Base64 Encode username and password
 	encode([encodeData length], (char *)[encodeData bytes], sizeof(encodeArray), encodeArray);
-	NSLog(@"Data encoded");
 	dataStr = [NSString stringWithCString:encodeArray length:strlen(encodeArray)];
-	NSLog(@"DataStr structured");
 	NSString *authenticationString = [@"" stringByAppendingFormat:@"Basic %@", dataStr];
 
 	//Add authentication header to request
-	NSLog(@"Adding request headers");
 	[request addRequestHeader:@"Authorization" value:authenticationString];
 	[request start];
-	
-	return TRUE;
 }
 
 //Posts to twitter
-//Returns TRUE on success
--(BOOL)post:(NSString *)tweet{
+-(void)post:(NSString *)tweet{
 	//setup request wtih URL
 	NSURL *url = [NSURL URLWithString:@"https://twitter.com/statuses/update.xml"];
 	ASIFormDataRequest *request = [[[ASIFormDataRequest alloc] initWithURL:url] autorelease];
@@ -69,8 +60,7 @@
 	
 	//TODO: pull username and password from keychain
 	NSString *username = [userDefaults objectForKey:@"username"];
-	NSString *dataStr = [NSString stringWithFormat:@"%@:%@", username, [SFHFKeychainUtils getPasswordForUsername:username andServiceName:@"Twitter" error:[NSError alloc]]];
-	NSLog(@"Username/password: %@", dataStr);
+	NSString *dataStr = [NSString stringWithFormat:@"%@:%@", username, [SFHFKeychainUtils getPasswordForUsername:username andServiceName:kServiceName error:[NSError alloc]]];
 	
 	//encode
 	NSData *encodeData = [dataStr dataUsingEncoding:NSUTF8StringEncoding];
@@ -143,11 +133,13 @@ int encode(unsigned s_len, char *src, unsigned d_len, char *dst)
 {
 	NSString *response = [request responseString];
 	NSLog(@"Response: %@", response);
-	NSLog(@"Headers: %@", [request responseHeaders]);
-	[SFHFKeychainUtils storeUsername:user andPassword:pass forServiceName:@"Twitter" updateExisting:FALSE error:[NSError alloc]];
+	results = (NSDictionary *)[CCJSONParser objectFromJSON:response];
+	//Once authentication is successful, store username into keyChain
+	[SFHFKeychainUtils storeUsername:user andPassword:pass forServiceName:kServiceName updateExisting:FALSE error:[NSError alloc]];
 	NSLog(@"Username/password stored in keychain");
 	[userDefaults setObject:user forKey:@"username"];
 	authenticated = TRUE;
+	//[[NSNotificationCenter defaultCenter] postNotification:kLoginSuccess];
 }
 - (void)requestDone:(ASIHTTPRequest *)request
 {
