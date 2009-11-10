@@ -1,0 +1,3 @@
+[submodule "CCJSON"]
+	path = CCJSON
+	url =  git://github.com/nilobject/CCJSON.git
