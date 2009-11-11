@@ -1,6 +1,6 @@
 //
 //  Tweeter.m
-//  Jamaica2Go
+//  Tweeter
 //
 //  Created by Joseph Pintozzi on 9/23/09.
 //  Copyright 2009 __MyCompanyName__. All rights reserved.
@@ -19,11 +19,13 @@
 -(NSString *)getTweet;
 -(NSString *)getDate;
 -(NSString *)getTime;
--(NSString *)getUser;
+-(NSDictionary *)getUserDict;
+-(NSString *)getUsername;
 -(void)setTweet:(NSString *)string;
 -(void)setDate:(NSString *)string;
 -(void)setTime:(NSString *)string;
--(void)setUser:(NSString *)string;
+-(void)setUser:(NSDictionary *)string;
+-(void)setUser:(NSDictionary *)user andTweet:(NSString *)tweet andDate:(NSString *)date andTime:(NSString *)time;
 
 @end
 
@@ -43,8 +45,11 @@
 -(NSString *)getTime{
 	return [self.dict objectForKey:kDictTime];
 }
--(NSString *)getUser{
+-(NSDictionary *)getUserDict{
 	return [self.dict objectForKey:kDictUser];
+}
+-(NSString *)getUsername{
+	return [[self.dict objectForKey:kDictUser] objectForKey:@"screen_name"];
 }
 
 -(void)setTweet:(NSString *)string{
@@ -71,19 +76,25 @@
 		[self.dict setObject:string forKey:kDictTime];
 	}
 }
--(void)setUser:(NSString *)string{
-	if (string == nil) {
+-(void)setUser:(NSDictionary *)temp{
+	if (temp == nil) {
 		[self.dict setObject:@"" forKey:kDictUser];
 	}
 	else {
-		[self.dict setObject:string forKey:kDictUser];
+		[self.dict setObject:temp forKey:kDictUser];
 	}
+}
+-(void)setUser:(NSDictionary *)user andTweet:(NSString *)tweet andDate:(NSString *)date andTime:(NSString *)time{
+	[self setUser:user];
+	[self setTweet:tweet];
+	[self setDate:date];
+	[self setTime:time];
 }
 @end
 
 
 @implementation Tweeter
-@synthesize user, pass, results;
+@synthesize user, pass, results, authenticated;
 
 -(id) init{
 	userDefaults = [[NSUserDefaults standardUserDefaults] retain];
@@ -121,6 +132,16 @@
 
 	//Add authentication header to request
 	[request addRequestHeader:@"Authorization" value:authenticationString];
+	[request start];
+}
+
+//log out and clean up user authentication
+-(void)logout{
+	NSURL *url = [NSURL URLWithString:@"https://twitter.com/account/end_session.xml"];
+	ASIFormDataRequest *request = [[[ASIFormDataRequest alloc] initWithURL:url] autorelease];
+	[request setDelegate:self];
+	[request setDidFinishSelector:@selector(requestDone:)];
+	[request setDidFailSelector:@selector(requestFailed:)];
 	[request start];
 }
 
@@ -165,8 +186,8 @@
 }
 
 //returns an array of tweets
-+(NSArray *)getTweets:(NSString *)profID{
-	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://twitter.com/statuses/user_timeline/%@.json",profID]];
++(NSArray *)getTweets:(NSURL *)url{
+	//NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://twitter.com/statuses/user_timeline/%@.json",profID]];
 	NSLog(@"Pulling info");
 	//NSLog(@"%@", [CCJSONParser objectFromJSON:[NSString stringWithContentsOfURL:url encoding:4 error:nil]]);
 	NSMutableArray *tweets, *pulled;
@@ -181,7 +202,7 @@
 		//TODO, parse date and time properly
 		[post setDate: [[pulled objectAtIndex:i] objectForKey:@"created_at"]];
 		[post setTime: [[pulled objectAtIndex:i] objectForKey:@"created_at"]];
-		[post setUser: [[[pulled objectAtIndex:i] objectForKey:@"user"] objectForKey:@"screen_name"]];
+		[post setUser: [[pulled objectAtIndex:i] objectForKey:@"user"]];
 		[tweets addObject:post];
 		post = nil;
 	}
@@ -189,6 +210,26 @@
 	//[post release];
 	
 	return tweets; //[CCJSONParser objectFromJSON:[NSString stringWithContentsOfURL:url encoding:4 error:nil]];
+}
+
+//returns array of tweets from a specific user's timeline
++(NSArray *)getUserTimeline:(NSString *)profID{
+	return [self getTweets:[NSURL URLWithString:[NSString stringWithFormat:@"https://twitter.com/statuses/user_timeline/%@.json",profID]]];
+}
+
++(NSArray *)getPublicTimeline{
+	return [self getTweets:[NSURL URLWithString:@"https://twitter.com/statuses/public_timeline.json"]];
+}
+
+//This cannot be a '+' method because you have to authenticate before being able to use this
+-(NSArray *)getFriendsTimeline{
+	if (self.authenticated == TRUE) {
+		return [Tweeter getTweets:[NSURL URLWithString:@"https://twitter.com/statuses/friends_timeline.json"]];
+	}
+	else {
+		return nil;
+	}
+
 }
 
 #pragma mark Base64 Encoding

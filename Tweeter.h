@@ -1,6 +1,6 @@
 //
 //  Tweeter.h
-//  Jamaica2Go
+//  Tweeter
 //
 //  Created by Joseph Pintozzi on 9/23/09.
 //  Copyright 2009 __MyCompanyName__. All rights reserved.
@@ -28,12 +28,20 @@
 
 -(id)init;
 -(void)loginWithUsername:(NSString *)username password:(NSString *)password;
+-(void)logout;
 -(void)post:(NSString *)tweet;
+
 -(UIImage *)getMyPic;
 -(UIImage *)getProfilePic:(NSString	*)profID;
-+(NSArray *)getTweets:(NSString *)profID;
++(NSArray *)getTweets:(NSURL *)url;
++(NSArray *)getUserTimeline:(NSString *)profID;
++(NSArray *)getPublicTimeline;
+-(NSArray *)getFriendsTimeline;
+
+int encode(unsigned s_len, char *src, unsigned d_len, char *dst);
 
 @property (nonatomic, retain) NSString *user, *pass;
 @property (nonatomic, retain) NSDictionary *results;
+@property BOOL authenticated;
 
 @end

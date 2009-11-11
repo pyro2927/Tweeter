@@ -20,14 +20,18 @@
 }
 -(IBAction)post{
 	//[twit post:tweetBox.text];
-	if (twit == nil) {
-		twit = [[Tweeter alloc] init];
+	if (twit != nil) {
+		if (twit.authenticated == TRUE) {
+			[twit post:tweetBox.text];
+		}
+		else {
+			NSLog(@"Did not authenticate first");
+		}
 	}
-	NSArray *temp = [[NSArray alloc] initWithArray:[Tweeter getTweets:@"17888112"]];
-	for (int i = 0; i < [temp count]; i++) {
-		NSLog(@"%@: %@", [[temp objectAtIndex:i] getUser], [[temp objectAtIndex:i] getTweet]);
+	else {
+		NSLog(@"Twit object not created");
 	}
-	//NSLog(@"%@",[CCJSONParser objectFromJSON:[NSString stringWithContentsOfURL:[NSURL URLWithString:@"https://twitter.com/statuses/user_timeline/17888112.json"] encoding:4 error:nil]]);
+
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)theTextField {
