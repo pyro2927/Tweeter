@@ -14,7 +14,6 @@
 	IBOutlet UITextField *name, *pass, *tweetBox;
 	Tweeter *twit;
 	IBOutlet UIImageView *pic;
-	
 }
 
 @property (nonatomic, retain) IBOutlet UITextView *results;

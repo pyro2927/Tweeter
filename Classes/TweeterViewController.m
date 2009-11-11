@@ -15,11 +15,19 @@
 -(IBAction)login{
 	twit = [[Tweeter alloc] init];
 	[twit loginWithUsername:name.text password:pass.text];
-	NSLog(@"Attempting to pull results");
-	NSLog(@"%@",twit.results);
+	//pic.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[twit.results objectForKey:@"profile_image_url"]]]];
+	pic.image = [twit getMyPic];
 }
 -(IBAction)post{
-	[twit post:tweetBox.text];
+	//[twit post:tweetBox.text];
+	if (twit == nil) {
+		twit = [[Tweeter alloc] init];
+	}
+	NSArray *temp = [[NSArray alloc] initWithArray:[Tweeter getTweets:@"17888112"]];
+	for (int i = 0; i < [temp count]; i++) {
+		NSLog(@"%@: %@", [[temp objectAtIndex:i] getUser], [[temp objectAtIndex:i] getTweet]);
+	}
+	//NSLog(@"%@",[CCJSONParser objectFromJSON:[NSString stringWithContentsOfURL:[NSURL URLWithString:@"https://twitter.com/statuses/user_timeline/17888112.json"] encoding:4 error:nil]]);
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)theTextField {
@@ -28,7 +36,6 @@
 	}
 	else {
 		[theTextField resignFirstResponder];
-		[self login];
 	}
 	return YES;
 }
@@ -45,24 +52,13 @@
 	results.text = @"Logged in successfully";
 }
 
-/*
-// Override to allow orientations other than the default portrait orientation.
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    // Return YES for supported orientations
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
-*/
-
 - (void)didReceiveMemoryWarning {
 	// Releases the view if it doesn't have a superview.
     [super didReceiveMemoryWarning];
 	
-	// Release any cached data, images, etc that aren't in use.
 }
 
 - (void)viewDidUnload {
-	// Release any retained subviews of the main view.
-	// e.g. self.myOutlet = nil;
 }
 
 

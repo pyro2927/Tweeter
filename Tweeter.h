@@ -14,7 +14,10 @@
 #define kServiceName	@"Tweeter"
 #define kLoginSuccess	@"Logged in Successfully"
 #define kError			@"Tweeter Error"
-
+#define kDictTweet		@"DictTweet"
+#define kDictDate		@"DictDate"
+#define kDictTime		@"DictTime"
+#define kDictUser		@"DictUser"
 
 @interface Tweeter : NSObject {
 	NSString *user, *pass;
@@ -26,6 +29,9 @@
 -(id)init;
 -(void)loginWithUsername:(NSString *)username password:(NSString *)password;
 -(void)post:(NSString *)tweet;
+-(UIImage *)getMyPic;
+-(UIImage *)getProfilePic:(NSString	*)profID;
++(NSArray *)getTweets:(NSString *)profID;
 
 @property (nonatomic, retain) NSString *user, *pass;
 @property (nonatomic, retain) NSDictionary *results;

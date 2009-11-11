@@ -28,31 +28,9 @@
 		D82D0BE710A9D52200020AB1 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D82D0BE610A9D52200020AB1 /* Security.framework */; };
 		D82D0BED10A9D53700020AB1 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D82D0BEC10A9D53700020AB1 /* CFNetwork.framework */; };
 		D82D0BF310A9D54D00020AB1 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D82D0BF210A9D54D00020AB1 /* SystemConfiguration.framework */; };
-		D82D0CB610A9E1CD00020AB1 /* config in Resources */ = {isa = PBXBuildFile; fileRef = D82D0C8D10A9E1CD00020AB1 /* config */; };
-		D82D0CB710A9E1CD00020AB1 /* description in Resources */ = {isa = PBXBuildFile; fileRef = D82D0C8E10A9E1CD00020AB1 /* description */; };
-		D82D0CB810A9E1CD00020AB1 /* HEAD in Resources */ = {isa = PBXBuildFile; fileRef = D82D0C8F10A9E1CD00020AB1 /* HEAD */; };
-		D82D0CB910A9E1CD00020AB1 /* applypatch-msg.sample in Resources */ = {isa = PBXBuildFile; fileRef = D82D0C9110A9E1CD00020AB1 /* applypatch-msg.sample */; };
-		D82D0CBA10A9E1CD00020AB1 /* commit-msg.sample in Resources */ = {isa = PBXBuildFile; fileRef = D82D0C9210A9E1CD00020AB1 /* commit-msg.sample */; };
-		D82D0CBB10A9E1CD00020AB1 /* post-commit.sample in Resources */ = {isa = PBXBuildFile; fileRef = D82D0C9310A9E1CD00020AB1 /* post-commit.sample */; };
-		D82D0CBC10A9E1CD00020AB1 /* post-receive.sample in Resources */ = {isa = PBXBuildFile; fileRef = D82D0C9410A9E1CD00020AB1 /* post-receive.sample */; };
-		D82D0CBD10A9E1CD00020AB1 /* post-update.sample in Resources */ = {isa = PBXBuildFile; fileRef = D82D0C9510A9E1CD00020AB1 /* post-update.sample */; };
-		D82D0CBE10A9E1CD00020AB1 /* pre-applypatch.sample in Resources */ = {isa = PBXBuildFile; fileRef = D82D0C9610A9E1CD00020AB1 /* pre-applypatch.sample */; };
-		D82D0CBF10A9E1CD00020AB1 /* pre-commit.sample in Resources */ = {isa = PBXBuildFile; fileRef = D82D0C9710A9E1CD00020AB1 /* pre-commit.sample */; };
-		D82D0CC010A9E1CD00020AB1 /* pre-rebase.sample in Resources */ = {isa = PBXBuildFile; fileRef = D82D0C9810A9E1CD00020AB1 /* pre-rebase.sample */; };
-		D82D0CC110A9E1CD00020AB1 /* prepare-commit-msg.sample in Resources */ = {isa = PBXBuildFile; fileRef = D82D0C9910A9E1CD00020AB1 /* prepare-commit-msg.sample */; };
-		D82D0CC210A9E1CD00020AB1 /* update.sample in Resources */ = {isa = PBXBuildFile; fileRef = D82D0C9A10A9E1CD00020AB1 /* update.sample */; };
-		D82D0CC310A9E1CD00020AB1 /* index in Resources */ = {isa = PBXBuildFile; fileRef = D82D0C9B10A9E1CD00020AB1 /* index */; };
-		D82D0CC410A9E1CD00020AB1 /* exclude in Resources */ = {isa = PBXBuildFile; fileRef = D82D0C9D10A9E1CD00020AB1 /* exclude */; };
-		D82D0CC510A9E1CD00020AB1 /* HEAD in Resources */ = {isa = PBXBuildFile; fileRef = D82D0C9F10A9E1CD00020AB1 /* HEAD */; };
-		D82D0CC610A9E1CD00020AB1 /* master in Resources */ = {isa = PBXBuildFile; fileRef = D82D0CA210A9E1CD00020AB1 /* master */; };
-		D82D0CC710A9E1CD00020AB1 /* HEAD in Resources */ = {isa = PBXBuildFile; fileRef = D82D0CA510A9E1CD00020AB1 /* HEAD */; };
-		D82D0CC810A9E1CD00020AB1 /* pack-f2c9b6f1cff2bef4e07d5501d03951e8ca8cc00c.idx in Resources */ = {isa = PBXBuildFile; fileRef = D82D0CA910A9E1CD00020AB1 /* pack-f2c9b6f1cff2bef4e07d5501d03951e8ca8cc00c.idx */; };
-		D82D0CC910A9E1CD00020AB1 /* pack-f2c9b6f1cff2bef4e07d5501d03951e8ca8cc00c.pack in Resources */ = {isa = PBXBuildFile; fileRef = D82D0CAA10A9E1CD00020AB1 /* pack-f2c9b6f1cff2bef4e07d5501d03951e8ca8cc00c.pack */; };
-		D82D0CCA10A9E1CD00020AB1 /* packed-refs in Resources */ = {isa = PBXBuildFile; fileRef = D82D0CAB10A9E1CD00020AB1 /* packed-refs */; };
-		D82D0CCB10A9E1CD00020AB1 /* master in Resources */ = {isa = PBXBuildFile; fileRef = D82D0CAE10A9E1CD00020AB1 /* master */; };
-		D82D0CCC10A9E1CD00020AB1 /* HEAD in Resources */ = {isa = PBXBuildFile; fileRef = D82D0CB110A9E1CD00020AB1 /* HEAD */; };
-		D82D0CCD10A9E1CD00020AB1 /* CCJSONParser.m in Sources */ = {isa = PBXBuildFile; fileRef = D82D0CB410A9E1CD00020AB1 /* CCJSONParser.m */; };
-		D82D0CCE10A9E1CD00020AB1 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = D82D0CB510A9E1CD00020AB1 /* README.md */; };
+		D82D0D4C10A9FD8B00020AB1 /* CCJSONParser.m in Sources */ = {isa = PBXBuildFile; fileRef = D82D0D3110A9FD8B00020AB1 /* CCJSONParser.m */; };
+		D82D0D4D10A9FD8B00020AB1 /* CCJSONWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = D82D0D3310A9FD8B00020AB1 /* CCJSONWriter.m */; };
+		D82D0D4E10A9FD8B00020AB1 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = D82D0D3410A9FD8B00020AB1 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -91,32 +69,11 @@
 		D82D0BE610A9D52200020AB1 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		D82D0BEC10A9D53700020AB1 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		D82D0BF210A9D54D00020AB1 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		D82D0C8D10A9E1CD00020AB1 /* config */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = config; sourceTree = "<group>"; };
-		D82D0C8E10A9E1CD00020AB1 /* description */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = description; sourceTree = "<group>"; };
-		D82D0C8F10A9E1CD00020AB1 /* HEAD */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = HEAD; sourceTree = "<group>"; };
-		D82D0C9110A9E1CD00020AB1 /* applypatch-msg.sample */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "applypatch-msg.sample"; sourceTree = "<group>"; };
-		D82D0C9210A9E1CD00020AB1 /* commit-msg.sample */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "commit-msg.sample"; sourceTree = "<group>"; };
-		D82D0C9310A9E1CD00020AB1 /* post-commit.sample */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "post-commit.sample"; sourceTree = "<group>"; };
-		D82D0C9410A9E1CD00020AB1 /* post-receive.sample */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "post-receive.sample"; sourceTree = "<group>"; };
-		D82D0C9510A9E1CD00020AB1 /* post-update.sample */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "post-update.sample"; sourceTree = "<group>"; };
-		D82D0C9610A9E1CD00020AB1 /* pre-applypatch.sample */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "pre-applypatch.sample"; sourceTree = "<group>"; };
-		D82D0C9710A9E1CD00020AB1 /* pre-commit.sample */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "pre-commit.sample"; sourceTree = "<group>"; };
-		D82D0C9810A9E1CD00020AB1 /* pre-rebase.sample */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "pre-rebase.sample"; sourceTree = "<group>"; };
-		D82D0C9910A9E1CD00020AB1 /* prepare-commit-msg.sample */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "prepare-commit-msg.sample"; sourceTree = "<group>"; };
-		D82D0C9A10A9E1CD00020AB1 /* update.sample */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = update.sample; sourceTree = "<group>"; };
-		D82D0C9B10A9E1CD00020AB1 /* index */ = {isa = PBXFileReference; lastKnownFileType = file; path = index; sourceTree = "<group>"; };
-		D82D0C9D10A9E1CD00020AB1 /* exclude */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = exclude; sourceTree = "<group>"; };
-		D82D0C9F10A9E1CD00020AB1 /* HEAD */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = HEAD; sourceTree = "<group>"; };
-		D82D0CA210A9E1CD00020AB1 /* master */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = master; sourceTree = "<group>"; };
-		D82D0CA510A9E1CD00020AB1 /* HEAD */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = HEAD; sourceTree = "<group>"; };
-		D82D0CA910A9E1CD00020AB1 /* pack-f2c9b6f1cff2bef4e07d5501d03951e8ca8cc00c.idx */ = {isa = PBXFileReference; lastKnownFileType = file; path = "pack-f2c9b6f1cff2bef4e07d5501d03951e8ca8cc00c.idx"; sourceTree = "<group>"; };
-		D82D0CAA10A9E1CD00020AB1 /* pack-f2c9b6f1cff2bef4e07d5501d03951e8ca8cc00c.pack */ = {isa = PBXFileReference; lastKnownFileType = file; path = "pack-f2c9b6f1cff2bef4e07d5501d03951e8ca8cc00c.pack"; sourceTree = "<group>"; };
-		D82D0CAB10A9E1CD00020AB1 /* packed-refs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "packed-refs"; sourceTree = "<group>"; };
-		D82D0CAE10A9E1CD00020AB1 /* master */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = master; sourceTree = "<group>"; };
-		D82D0CB110A9E1CD00020AB1 /* HEAD */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = HEAD; sourceTree = "<group>"; };
-		D82D0CB310A9E1CD00020AB1 /* CCJSONParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCJSONParser.h; sourceTree = "<group>"; };
-		D82D0CB410A9E1CD00020AB1 /* CCJSONParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCJSONParser.m; sourceTree = "<group>"; };
-		D82D0CB510A9E1CD00020AB1 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		D82D0D3010A9FD8B00020AB1 /* CCJSONParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCJSONParser.h; sourceTree = "<group>"; };
+		D82D0D3110A9FD8B00020AB1 /* CCJSONParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCJSONParser.m; sourceTree = "<group>"; };
+		D82D0D3210A9FD8B00020AB1 /* CCJSONWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCJSONWriter.h; sourceTree = "<group>"; };
+		D82D0D3310A9FD8B00020AB1 /* CCJSONWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCJSONWriter.m; sourceTree = "<group>"; };
+		D82D0D3410A9FD8B00020AB1 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,7 +97,7 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				D82D0C8A10A9E1CD00020AB1 /* CCJSON */,
+				D82D0D0710A9FD8B00020AB1 /* CCJSON */,
 				D82D0B8B10A9D13A00020AB1 /* ASI */,
 				D82D0B8710A9D11F00020AB1 /* Tweeter */,
 				D82D0BA110A9D14500020AB1 /* scifi */,
@@ -252,174 +209,17 @@
 			path = security;
 			sourceTree = "<group>";
 		};
-		D82D0C8A10A9E1CD00020AB1 /* CCJSON */ = {
+		D82D0D0710A9FD8B00020AB1 /* CCJSON */ = {
 			isa = PBXGroup;
 			children = (
-				D82D0C8B10A9E1CD00020AB1 /* .git */,
-				D82D0CB310A9E1CD00020AB1 /* CCJSONParser.h */,
-				D82D0CB410A9E1CD00020AB1 /* CCJSONParser.m */,
-				D82D0CB510A9E1CD00020AB1 /* README.md */,
+				D82D0D3010A9FD8B00020AB1 /* CCJSONParser.h */,
+				D82D0D3110A9FD8B00020AB1 /* CCJSONParser.m */,
+				D82D0D3210A9FD8B00020AB1 /* CCJSONWriter.h */,
+				D82D0D3310A9FD8B00020AB1 /* CCJSONWriter.m */,
+				D82D0D3410A9FD8B00020AB1 /* README.md */,
 			);
 			path = CCJSON;
 			sourceTree = SOURCE_ROOT;
-		};
-		D82D0C8B10A9E1CD00020AB1 /* .git */ = {
-			isa = PBXGroup;
-			children = (
-				D82D0C8C10A9E1CD00020AB1 /* branches */,
-				D82D0C8D10A9E1CD00020AB1 /* config */,
-				D82D0C8E10A9E1CD00020AB1 /* description */,
-				D82D0C8F10A9E1CD00020AB1 /* HEAD */,
-				D82D0C9010A9E1CD00020AB1 /* hooks */,
-				D82D0C9B10A9E1CD00020AB1 /* index */,
-				D82D0C9C10A9E1CD00020AB1 /* info */,
-				D82D0C9E10A9E1CD00020AB1 /* logs */,
-				D82D0CA610A9E1CD00020AB1 /* objects */,
-				D82D0CAB10A9E1CD00020AB1 /* packed-refs */,
-				D82D0CAC10A9E1CD00020AB1 /* refs */,
-			);
-			path = .git;
-			sourceTree = "<group>";
-		};
-		D82D0C8C10A9E1CD00020AB1 /* branches */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = branches;
-			sourceTree = "<group>";
-		};
-		D82D0C9010A9E1CD00020AB1 /* hooks */ = {
-			isa = PBXGroup;
-			children = (
-				D82D0C9110A9E1CD00020AB1 /* applypatch-msg.sample */,
-				D82D0C9210A9E1CD00020AB1 /* commit-msg.sample */,
-				D82D0C9310A9E1CD00020AB1 /* post-commit.sample */,
-				D82D0C9410A9E1CD00020AB1 /* post-receive.sample */,
-				D82D0C9510A9E1CD00020AB1 /* post-update.sample */,
-				D82D0C9610A9E1CD00020AB1 /* pre-applypatch.sample */,
-				D82D0C9710A9E1CD00020AB1 /* pre-commit.sample */,
-				D82D0C9810A9E1CD00020AB1 /* pre-rebase.sample */,
-				D82D0C9910A9E1CD00020AB1 /* prepare-commit-msg.sample */,
-				D82D0C9A10A9E1CD00020AB1 /* update.sample */,
-			);
-			path = hooks;
-			sourceTree = "<group>";
-		};
-		D82D0C9C10A9E1CD00020AB1 /* info */ = {
-			isa = PBXGroup;
-			children = (
-				D82D0C9D10A9E1CD00020AB1 /* exclude */,
-			);
-			path = info;
-			sourceTree = "<group>";
-		};
-		D82D0C9E10A9E1CD00020AB1 /* logs */ = {
-			isa = PBXGroup;
-			children = (
-				D82D0C9F10A9E1CD00020AB1 /* HEAD */,
-				D82D0CA010A9E1CD00020AB1 /* refs */,
-			);
-			path = logs;
-			sourceTree = "<group>";
-		};
-		D82D0CA010A9E1CD00020AB1 /* refs */ = {
-			isa = PBXGroup;
-			children = (
-				D82D0CA110A9E1CD00020AB1 /* heads */,
-				D82D0CA310A9E1CD00020AB1 /* remotes */,
-			);
-			path = refs;
-			sourceTree = "<group>";
-		};
-		D82D0CA110A9E1CD00020AB1 /* heads */ = {
-			isa = PBXGroup;
-			children = (
-				D82D0CA210A9E1CD00020AB1 /* master */,
-			);
-			path = heads;
-			sourceTree = "<group>";
-		};
-		D82D0CA310A9E1CD00020AB1 /* remotes */ = {
-			isa = PBXGroup;
-			children = (
-				D82D0CA410A9E1CD00020AB1 /* origin */,
-			);
-			path = remotes;
-			sourceTree = "<group>";
-		};
-		D82D0CA410A9E1CD00020AB1 /* origin */ = {
-			isa = PBXGroup;
-			children = (
-				D82D0CA510A9E1CD00020AB1 /* HEAD */,
-			);
-			path = origin;
-			sourceTree = "<group>";
-		};
-		D82D0CA610A9E1CD00020AB1 /* objects */ = {
-			isa = PBXGroup;
-			children = (
-				D82D0CA710A9E1CD00020AB1 /* info */,
-				D82D0CA810A9E1CD00020AB1 /* pack */,
-			);
-			path = objects;
-			sourceTree = "<group>";
-		};
-		D82D0CA710A9E1CD00020AB1 /* info */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = info;
-			sourceTree = "<group>";
-		};
-		D82D0CA810A9E1CD00020AB1 /* pack */ = {
-			isa = PBXGroup;
-			children = (
-				D82D0CA910A9E1CD00020AB1 /* pack-f2c9b6f1cff2bef4e07d5501d03951e8ca8cc00c.idx */,
-				D82D0CAA10A9E1CD00020AB1 /* pack-f2c9b6f1cff2bef4e07d5501d03951e8ca8cc00c.pack */,
-			);
-			path = pack;
-			sourceTree = "<group>";
-		};
-		D82D0CAC10A9E1CD00020AB1 /* refs */ = {
-			isa = PBXGroup;
-			children = (
-				D82D0CAD10A9E1CD00020AB1 /* heads */,
-				D82D0CAF10A9E1CD00020AB1 /* remotes */,
-				D82D0CB210A9E1CD00020AB1 /* tags */,
-			);
-			path = refs;
-			sourceTree = "<group>";
-		};
-		D82D0CAD10A9E1CD00020AB1 /* heads */ = {
-			isa = PBXGroup;
-			children = (
-				D82D0CAE10A9E1CD00020AB1 /* master */,
-			);
-			path = heads;
-			sourceTree = "<group>";
-		};
-		D82D0CAF10A9E1CD00020AB1 /* remotes */ = {
-			isa = PBXGroup;
-			children = (
-				D82D0CB010A9E1CD00020AB1 /* origin */,
-			);
-			path = remotes;
-			sourceTree = "<group>";
-		};
-		D82D0CB010A9E1CD00020AB1 /* origin */ = {
-			isa = PBXGroup;
-			children = (
-				D82D0CB110A9E1CD00020AB1 /* HEAD */,
-			);
-			path = origin;
-			sourceTree = "<group>";
-		};
-		D82D0CB210A9E1CD00020AB1 /* tags */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = tags;
-			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -465,30 +265,7 @@
 			files = (
 				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
 				2899E5220DE3E06400AC0155 /* TweeterViewController.xib in Resources */,
-				D82D0CB610A9E1CD00020AB1 /* config in Resources */,
-				D82D0CB710A9E1CD00020AB1 /* description in Resources */,
-				D82D0CB810A9E1CD00020AB1 /* HEAD in Resources */,
-				D82D0CB910A9E1CD00020AB1 /* applypatch-msg.sample in Resources */,
-				D82D0CBA10A9E1CD00020AB1 /* commit-msg.sample in Resources */,
-				D82D0CBB10A9E1CD00020AB1 /* post-commit.sample in Resources */,
-				D82D0CBC10A9E1CD00020AB1 /* post-receive.sample in Resources */,
-				D82D0CBD10A9E1CD00020AB1 /* post-update.sample in Resources */,
-				D82D0CBE10A9E1CD00020AB1 /* pre-applypatch.sample in Resources */,
-				D82D0CBF10A9E1CD00020AB1 /* pre-commit.sample in Resources */,
-				D82D0CC010A9E1CD00020AB1 /* pre-rebase.sample in Resources */,
-				D82D0CC110A9E1CD00020AB1 /* prepare-commit-msg.sample in Resources */,
-				D82D0CC210A9E1CD00020AB1 /* update.sample in Resources */,
-				D82D0CC310A9E1CD00020AB1 /* index in Resources */,
-				D82D0CC410A9E1CD00020AB1 /* exclude in Resources */,
-				D82D0CC510A9E1CD00020AB1 /* HEAD in Resources */,
-				D82D0CC610A9E1CD00020AB1 /* master in Resources */,
-				D82D0CC710A9E1CD00020AB1 /* HEAD in Resources */,
-				D82D0CC810A9E1CD00020AB1 /* pack-f2c9b6f1cff2bef4e07d5501d03951e8ca8cc00c.idx in Resources */,
-				D82D0CC910A9E1CD00020AB1 /* pack-f2c9b6f1cff2bef4e07d5501d03951e8ca8cc00c.pack in Resources */,
-				D82D0CCA10A9E1CD00020AB1 /* packed-refs in Resources */,
-				D82D0CCB10A9E1CD00020AB1 /* master in Resources */,
-				D82D0CCC10A9E1CD00020AB1 /* HEAD in Resources */,
-				D82D0CCE10A9E1CD00020AB1 /* README.md in Resources */,
+				D82D0D4E10A9FD8B00020AB1 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -511,7 +288,8 @@
 				D82D0B9F10A9D13A00020AB1 /* ASINSStringAdditions.m in Sources */,
 				D82D0BA010A9D13A00020AB1 /* Reachability.m in Sources */,
 				D82D0BAE10A9D14500020AB1 /* SFHFKeychainUtils.m in Sources */,
-				D82D0CCD10A9E1CD00020AB1 /* CCJSONParser.m in Sources */,
+				D82D0D4C10A9FD8B00020AB1 /* CCJSONParser.m in Sources */,
+				D82D0D4D10A9FD8B00020AB1 /* CCJSONWriter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
