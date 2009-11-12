@@ -1,0 +1,13 @@
+___________                      __                
+\__    ___/_  _  __ ____   _____/  |_  ___________ 
+  |    |  \ \/ \/ // __ \_/ __ \   __\/ __ \_  __ \
+  |    |   \     /\  ___/\  ___/|  | \  ___/|  | \/
+  |____|    \/\_/  \___  >\___  >__|  \___  >__|   
+                       \/     \/          \/
+
+The goal of Tweeter is to provide an easy to use framework for the Twitter API in Objective-C (specifically for the iPhone).  While it is still young, I hope other developers can use it for their needs.
+
+If you would like to request features, or have a bug to report, please email feedback@tinydragonapps.com.
+
+11/11/09
+* As of right now Tweeter provides basic authentication, pulling current Trends, public timeline, friends timeline, a user's picture, and a basic search. 

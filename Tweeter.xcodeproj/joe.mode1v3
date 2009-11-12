@@ -330,18 +330,23 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>D875D90510AB4B5000331144</string>
+										<string>D875DA0C10ABBC8C00331144</string>
 										<key>history</key>
 										<array>
 											<string>D82D0C2310A9D8FF00020AB1</string>
 											<string>D82D0C2410A9D8FF00020AB1</string>
 											<string>D82D0C2510A9D8FF00020AB1</string>
-											<string>D82D0C4910A9DAB100020AB1</string>
 											<string>D8FBCFAC10AA613A00E92E67</string>
-											<string>D8FBD03A10AA738F00E92E67</string>
-											<string>D875D90210AB4B5000331144</string>
-											<string>D875D90310AB4B5000331144</string>
-											<string>D875D90410AB4B5000331144</string>
+											<string>D875D93710AB732900331144</string>
+											<string>D875D93810AB732900331144</string>
+											<string>D875D93910AB732900331144</string>
+											<string>D875D93A10AB732900331144</string>
+											<string>D875D93B10AB732900331144</string>
+											<string>D875D9BC10AB7B4200331144</string>
+											<string>D875D9DB10ABB6D700331144</string>
+											<string>D875D9E910ABBACD00331144</string>
+											<string>D875D9EA10ABBACD00331144</string>
+											<string>D875D9E310ABBA9300331144</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -399,9 +404,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>D875D8BC10AB42FB00331144</string>
+				<string>D875D94110AB732900331144</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>D875D8BD10AB42FB00331144</string>
+				<string>D875D94210AB732900331144</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -539,7 +544,9 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>1CD10A99069EF8BA00B06720</string>
 		<string>D82D0BB710A9D17400020AB1</string>
+		<string>1C78EAAD065D492600B07095</string>
 		<string>/Users/joe/Documents/iPhone/Tweeter/Tweeter.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
@@ -564,7 +571,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>TweeterViewController.m</string>
+								<string>Tweeter.m</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -581,8 +588,6 @@
 							<string>218pt</string>
 						</dict>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -622,7 +627,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>D82D0BB710A9D17400020AB1</string>
-				<string>D875D8BE10AB42FB00331144</string>
+				<string>D875D92B10AB731A00331144</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>
@@ -666,8 +671,8 @@
 										<string>yes</string>
 										<key>sizes</key>
 										<array>
-											<string>{{0, 0}, {316, 198}}</string>
-											<string>{{316, 0}, {378, 198}}</string>
+											<string>{{0, 0}, {316, 201}}</string>
+											<string>{{316, 0}, {378, 201}}</string>
 										</array>
 									</dict>
 									<key>VerticalSplitView</key>
@@ -682,8 +687,8 @@
 										<string>yes</string>
 										<key>sizes</key>
 										<array>
-											<string>{{0, 0}, {694, 198}}</string>
-											<string>{{0, 198}, {694, 183}}</string>
+											<string>{{0, 0}, {694, 201}}</string>
+											<string>{{0, 201}, {694, 180}}</string>
 										</array>
 									</dict>
 								</dict>
@@ -716,7 +721,7 @@
 										<real>148</real>
 									</array>
 									<key>Frame</key>
-									<string>{{316, 0}, {378, 198}}</string>
+									<string>{{316, 0}, {378, 201}}</string>
 									<key>RubberWindowFrame</key>
 									<string>21 333 694 422 0 0 1280 778 </string>
 								</dict>
@@ -744,13 +749,13 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1CD10A99069EF8BA00B06720</string>
-				<string>D8FBCF6310AA0A4F00E92E67</string>
+				<string>D875D92C10AB731A00331144</string>
 				<string>1C162984064C10D400B95A72</string>
-				<string>D8FBCF6410AA0A4F00E92E67</string>
-				<string>D8FBCF6510AA0A4F00E92E67</string>
-				<string>D8FBCF6610AA0A4F00E92E67</string>
-				<string>D8FBCF6710AA0A4F00E92E67</string>
-				<string>D8FBCF6810AA0A4F00E92E67</string>
+				<string>D875D92D10AB731A00331144</string>
+				<string>D875D92E10AB731A00331144</string>
+				<string>D875D92F10AB731A00331144</string>
+				<string>D875D93010AB731A00331144</string>
+				<string>D875D93110AB731A00331144</string>
 			</array>
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.debugV3</string>
@@ -914,7 +919,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C78EAAD065D492600B07095</string>
-				<string>D8FBCF6910AA0A4F00E92E67</string>
+				<string>D875D93210AB731A00331144</string>
 				<string>1C78EAAC065D492600B07095</string>
 			</array>
 			<key>ToolbarConfiguration</key>
@@ -924,7 +929,7 @@
 			<key>WindowToolGUID</key>
 			<string>1C78EAAD065D492600B07095</string>
 			<key>WindowToolIsVisible</key>
-			<false/>
+			<true/>
 		</dict>
 		<dict>
 			<key>Identifier</key>

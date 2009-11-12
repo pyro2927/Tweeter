@@ -15,11 +15,10 @@
 -(IBAction)login{
 	twit = [[Tweeter alloc] init];
 	[twit loginWithUsername:name.text password:pass.text];
-	//pic.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[twit.results objectForKey:@"profile_image_url"]]]];
 	pic.image = [twit getMyPic];
 }
 -(IBAction)post{
-	//[twit post:tweetBox.text];
+	[Tweeter getTrends];
 	if (twit != nil) {
 		if (twit.authenticated == TRUE) {
 			[twit post:tweetBox.text];

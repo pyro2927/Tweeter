@@ -3,7 +3,7 @@
 //  Tweeter
 //
 //  Created by Joseph Pintozzi on 9/23/09.
-//  Copyright 2009 __MyCompanyName__. All rights reserved.
+//  Copyleft 2009 Tiny Dragon Apps, LLC. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -37,6 +37,10 @@
 +(NSArray *)getUserTimeline:(NSString *)profID;
 +(NSArray *)getPublicTimeline;
 -(NSArray *)getFriendsTimeline;
++(NSArray *)search:(NSString *)query;
++(NSArray *)searchUser:(NSString *)query;
++(NSArray *)getTrends;
+
 
 int encode(unsigned s_len, char *src, unsigned d_len, char *dst);
 

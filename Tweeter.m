@@ -3,7 +3,7 @@
 //  Tweeter
 //
 //  Created by Joseph Pintozzi on 9/23/09.
-//  Copyright 2009 __MyCompanyName__. All rights reserved.
+//  Copyleft 2009 Tiny Dragon Apps, LLC. All rights reserved.
 //
 
 #import "Tweeter.h"
@@ -177,19 +177,20 @@
 	[request start];
 }
 
+//Get's a user's picture after authenticating
 -(UIImage *)getMyPic{
 	return [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[self.results objectForKey:@"profile_image_url"]]]];
 }
 
+//Get a user's picture
+//Returned as a UIImage
 -(UIImage *)getProfilePic:(NSString	*)profID{
 	return [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:@""]]];
 }
 
-//returns an array of tweets
+//returns an array of Posts pulled from the given URL
 +(NSArray *)getTweets:(NSURL *)url{
-	//NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://twitter.com/statuses/user_timeline/%@.json",profID]];
 	NSLog(@"Pulling info");
-	//NSLog(@"%@", [CCJSONParser objectFromJSON:[NSString stringWithContentsOfURL:url encoding:4 error:nil]]);
 	NSMutableArray *tweets, *pulled;
 	tweets = [[NSMutableArray alloc] init];
 	pulled = [[NSArray alloc] initWithArray:[CCJSONParser objectFromJSON:[NSString stringWithContentsOfURL:url encoding:4 error:nil]]];
@@ -212,16 +213,18 @@
 	return tweets; //[CCJSONParser objectFromJSON:[NSString stringWithContentsOfURL:url encoding:4 error:nil]];
 }
 
-//returns array of tweets from a specific user's timeline
+//Returns array of Posts from a specific user's timeline
 +(NSArray *)getUserTimeline:(NSString *)profID{
 	return [self getTweets:[NSURL URLWithString:[NSString stringWithFormat:@"https://twitter.com/statuses/user_timeline/%@.json",profID]]];
 }
 
+//Returns an array of Posts from the public timeline
 +(NSArray *)getPublicTimeline{
 	return [self getTweets:[NSURL URLWithString:@"https://twitter.com/statuses/public_timeline.json"]];
 }
 
 //This cannot be a '+' method because you have to authenticate before being able to use this
+//Returns an array of Posts
 -(NSArray *)getFriendsTimeline{
 	if (self.authenticated == TRUE) {
 		return [Tweeter getTweets:[NSURL URLWithString:@"https://twitter.com/statuses/friends_timeline.json"]];
@@ -229,7 +232,63 @@
 	else {
 		return nil;
 	}
+}
 
+//Search a word or a string of words
++(NSArray *)search:(NSString *)query{
+	NSLog(@"Search query: %@", query);
+	NSMutableString *temp = [NSMutableString stringWithString:query];
+	NSRange range = NSMakeRange(0, [query length]);
+	[temp replaceOccurrencesOfString:@" " withString:@"+" options:NSLiteralSearch range:range];
+	NSArray *array = [[NSArray alloc] initWithArray:[CCJSONParser objectFromJSON:[NSString stringWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://search.twitter.com/search.json?q=%@",temp]] encoding:4 error:nil]]];
+	//the results are returned as an array within an array, at index 4
+	NSLog(@"Array count: %d", [array count]);
+	array = [array objectAtIndex:4];
+	NSLog(@"%@",[array objectAtIndex:1]);
+	
+	NSMutableArray *tweets = [[NSMutableArray alloc] init];
+	
+	Post *post = [[Post alloc] init];
+	
+	for (int i = 0; i < [array count]; i++) {
+		NSLog(@"Adding post %d",i);
+		post = [[Post alloc] init];
+		[post setTweet: [[array objectAtIndex:i] objectForKey:@"text"]];
+		[post setDate: [[array objectAtIndex:i] objectForKey:@"created_at"]];
+		[post setTime: [[array objectAtIndex:i] objectForKey:@"created_at"]];
+		NSMutableDictionary *d = [[NSMutableDictionary alloc] init];
+		[d setObject:[[array objectAtIndex:i] objectForKey:@"from_user"] forKey:@"screen_name"];
+		[post setUser: (NSDictionary *)d];
+		[tweets addObject:post];
+		NSLog(@"Post %d added",i);
+		post = nil;
+		[d release];
+	}
+	
+	return array;
+}
+//Search a specific user's name, do NOT include "@"
+//TODO: Finish this search function.  Does not work properly.
++(NSArray *)searchUser:(NSString *)query{
+	NSLog(@"Searching username: %@", query);
+	return [Tweeter search:[NSString stringWithFormat:@"%40%@", query]];
+}
+
+//Gather trends from feed
+//Returns an array of strings showing the latest trends
+//TODO: Sometimes this works, sometimes this fails.  Trying to figure out the bug
++(NSArray *)getTrends{
+	NSArray *array = [[NSArray alloc] initWithArray:[CCJSONParser objectFromJSON:[NSString stringWithContentsOfURL:[NSURL URLWithString:@"http://search.twitter.com/trends.json"] encoding:4 error:nil]]];
+	if (array == nil) {
+		NSLog(@"nothing pulled from trends");
+		return nil;
+	}
+	NSMutableArray *temp = [[NSMutableArray alloc] init];
+	array = [array objectAtIndex:1];
+	for (int i = 0; i < [array count]; i++) {
+		[temp addObject:[[array objectAtIndex:i] objectForKey:@"name"]];
+	}
+	return temp;
 }
 
 #pragma mark Base64 Encoding
