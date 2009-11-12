@@ -11,7 +11,6 @@
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
-		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
 		2899E5220DE3E06400AC0155 /* TweeterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2899E5210DE3E06400AC0155 /* TweeterViewController.xib */; };
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
 		28D7ACF80DDB3853001CB0EB /* TweeterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* TweeterViewController.m */; };
@@ -24,13 +23,13 @@
 		D82D0B9F10A9D13A00020AB1 /* ASINSStringAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D82D0B9710A9D13A00020AB1 /* ASINSStringAdditions.m */; };
 		D82D0BA010A9D13A00020AB1 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = D82D0B9910A9D13A00020AB1 /* Reachability.m */; };
 		D82D0BAE10A9D14500020AB1 /* SFHFKeychainUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = D82D0BA410A9D14500020AB1 /* SFHFKeychainUtils.m */; };
-		D82D0BDD10A9D3E000020AB1 /* libz.1.2.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D82D0BDC10A9D3E000020AB1 /* libz.1.2.3.dylib */; };
 		D82D0BE710A9D52200020AB1 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D82D0BE610A9D52200020AB1 /* Security.framework */; };
 		D82D0BED10A9D53700020AB1 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D82D0BEC10A9D53700020AB1 /* CFNetwork.framework */; };
 		D82D0BF310A9D54D00020AB1 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D82D0BF210A9D54D00020AB1 /* SystemConfiguration.framework */; };
 		D82D0D4C10A9FD8B00020AB1 /* CCJSONParser.m in Sources */ = {isa = PBXBuildFile; fileRef = D82D0D3110A9FD8B00020AB1 /* CCJSONParser.m */; };
 		D82D0D4D10A9FD8B00020AB1 /* CCJSONWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = D82D0D3310A9FD8B00020AB1 /* CCJSONWriter.m */; };
 		D82D0D4E10A9FD8B00020AB1 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = D82D0D3410A9FD8B00020AB1 /* README.md */; };
+		D875DA7210ABD62900331144 /* libz.1.2.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D875DA7110ABD62900331144 /* libz.1.2.3.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,7 +38,6 @@
 		1D3623250D0F684500981E51 /* TweeterAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TweeterAppDelegate.m; sourceTree = "<group>"; };
 		1D6058910D05DD3D006BFB54 /* Tweeter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tweeter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		2899E5210DE3E06400AC0155 /* TweeterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TweeterViewController.xib; sourceTree = "<group>"; };
 		28AD733E0D9D9553002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 		28D7ACF60DDB3853001CB0EB /* TweeterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TweeterViewController.h; sourceTree = "<group>"; };
@@ -65,7 +63,6 @@
 		D82D0B9910A9D13A00020AB1 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		D82D0BA310A9D14500020AB1 /* SFHFKeychainUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFHFKeychainUtils.h; sourceTree = "<group>"; };
 		D82D0BA410A9D14500020AB1 /* SFHFKeychainUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFHFKeychainUtils.m; sourceTree = "<group>"; };
-		D82D0BDC10A9D3E000020AB1 /* libz.1.2.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.3.dylib; path = usr/lib/libz.1.2.3.dylib; sourceTree = SDKROOT; };
 		D82D0BE610A9D52200020AB1 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		D82D0BEC10A9D53700020AB1 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		D82D0BF210A9D54D00020AB1 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -74,6 +71,7 @@
 		D82D0D3210A9FD8B00020AB1 /* CCJSONWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCJSONWriter.h; sourceTree = "<group>"; };
 		D82D0D3310A9FD8B00020AB1 /* CCJSONWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCJSONWriter.m; sourceTree = "<group>"; };
 		D82D0D3410A9FD8B00020AB1 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		D875DA7110ABD62900331144 /* libz.1.2.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.3.dylib; path = usr/lib/libz.1.2.3.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,11 +81,10 @@
 			files = (
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
-				288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */,
-				D82D0BDD10A9D3E000020AB1 /* libz.1.2.3.dylib in Frameworks */,
 				D82D0BE710A9D52200020AB1 /* Security.framework in Frameworks */,
 				D82D0BED10A9D53700020AB1 /* CFNetwork.framework in Frameworks */,
 				D82D0BF310A9D54D00020AB1 /* SystemConfiguration.framework in Frameworks */,
+				D875DA7210ABD62900331144 /* libz.1.2.3.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,13 +148,12 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D82D0BDC10A9D3E000020AB1 /* libz.1.2.3.dylib */,
 				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
 				1D30AB110D05D00D00671497 /* Foundation.framework */,
-				288765A40DF7441C002DB57D /* CoreGraphics.framework */,
 				D82D0BE610A9D52200020AB1 /* Security.framework */,
 				D82D0BEC10A9D53700020AB1 /* CFNetwork.framework */,
 				D82D0BF210A9D54D00020AB1 /* SystemConfiguration.framework */,
+				D875DA7110ABD62900331144 /* libz.1.2.3.dylib */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

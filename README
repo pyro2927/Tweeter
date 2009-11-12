@@ -10,4 +10,50 @@ The goal of Tweeter is to provide an easy to use framework for the Twitter API i
 If you would like to request features, or have a bug to report, please email feedback@tinydragonapps.com.
 
 11/11/09
-* As of right now Tweeter provides basic authentication, pulling current Trends, public timeline, friends timeline, a user's picture, and a basic search. 
+* As of right now Tweeter provides basic authentication, pulling current Trends, public timeline, friends timeline, a user's picture, and a basic search.
+
+= Index =
+1) Setup
+2) Working functionality
+2.1) Class methods
+2.2) Instance Methods
+
+
+***********************
+1) Setup
+***********************
+If you are creating a new XCode iPhone project from scratch, you must import the files in CCJSON, ASI, scifi, and Tweeter.  You must also add the following frameworks:
+* Security.framework
+* CFNetwork.framework
+* SystemConfiguration.framework
+* libz.1.2.3.dylib
+
+After that make sure to #import "Tweeter.h" in one of your project files and you are ready to go!
+
+
+***********************
+2) Working Functionality
+***********************
+The method calls are split into class methods and instance methods.  I split them on whether or not the Twitter API action requires authentication or not.  The instance methods can store the authentication and use it for other method calls.  Any method that does not require authentication is run as a class method.
+
+*NOTE: I am only listing methods that are complete.  Others may be included in the source that are not working 100%
+
+2.1) Class methods
+***********************
+The following methods can be called as class methods:
++(NSArray *)getTweets:(NSURL *)url;
++(NSArray *)getUserTimeline:(NSString *)profID;
++(NSArray *)getPublicTimeline;
++(NSArray *)search:(NSString *)query;
++(NSArray *)getTrends;
+
+3.1) Instance methods
+***********************
+The following methods can be called as class methods:
+-(void)loginWithUsername:(NSString *)username password:(NSString *)password;
+-(void)logout;
+-(void)post:(NSString *)tweet;
+-(UIImage *)getMyPic;
+-(NSArray *)getFriendsTimeline;
+
+*NOTE: Make sure to loginWithUsername: password: before calling any of the other methods.  It is not required to logout: when finished (authentication will time out eventually), but it is good practice to do so.

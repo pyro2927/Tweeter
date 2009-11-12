@@ -184,6 +184,7 @@
 
 //Get a user's picture
 //Returned as a UIImage
+//TODO: finish
 -(UIImage *)getProfilePic:(NSString	*)profID{
 	return [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:@""]]];
 }
