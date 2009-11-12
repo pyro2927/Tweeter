@@ -22,7 +22,7 @@ If you would like to request features, or have a bug to report, please email fee
 ***********************
 1) Setup
 ***********************
-If you are creating a new XCode iPhone project from scratch, you must import the files in CCJSON, ASI, scifi, and Tweeter.  You must also add the following frameworks:
+If you are creating a new Xcode iPhone project from scratch, you must import the files in CCJSON, ASI, scifi, and Tweeter.  You must also add the following frameworks:
 * Security.framework
 * CFNetwork.framework
 * SystemConfiguration.framework
