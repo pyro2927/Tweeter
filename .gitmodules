@@ -4,4 +4,8 @@
 
 [submodule "SciFi"]
 	path = scifi
+	url = git://github.com/ldandersen/scifihifi-iphone.git
+
+[submodule "ASI"]
+	path = ASI
 	url = git://github.com/pokeb/asi-http-request.git
