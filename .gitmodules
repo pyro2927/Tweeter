@@ -2,7 +2,6 @@
 	path = CCJSON
 	url =  git://github.com/nilobject/CCJSON.git
 
-[submodule "sciFi"]
+[submodule "scifi"]
 	path = scifi
 	url = git://github.com/ldandersen/scifihifi-iphone.git
-
