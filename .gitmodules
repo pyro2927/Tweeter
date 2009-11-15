@@ -1,3 +1,7 @@
 [submodule "CCJSON"]
 	path = CCJSON
 	url =  git://github.com/nilobject/CCJSON.git
+
+[submodule "SciFi"]
+	path = scifi
+	url = git://github.com/pokeb/asi-http-request.git
