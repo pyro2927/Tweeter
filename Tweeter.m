@@ -356,7 +356,7 @@ int encode(unsigned s_len, char *src, unsigned d_len, char *dst)
 {
 	NSError *error = [request error];
 	NSLog(@"Error: %@", error);
-	[[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:kLoginSuccess object:nil]];
+	[[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:kError object:nil]];
 }
 
 - (void)requestDone:(ASIHTTPRequest *)request
