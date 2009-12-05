@@ -135,6 +135,39 @@
 	[request start];
 }
 
+//Checks to see if credentials have been stored before, that way we don't need to login
+-(BOOL)hasCredentials{
+	//setup request wtih URL
+	NSURL *url = [NSURL URLWithString:@"http://twitter.com/account/verify_credentials.json"];
+	ASIFormDataRequest *request = [[[ASIFormDataRequest alloc] initWithURL:url] autorelease];
+	[request setDelegate:self];
+	[request setDidFinishSelector:@selector(authDone:)];
+	[request setDidFailSelector:@selector(authFailed:)];
+	
+	NSString *username = [userDefaults objectForKey:@"username"];
+	if (!username || ![SFHFKeychainUtils getPasswordForUsername:username andServiceName:kServiceName error:[NSError alloc]]) {
+		return NO;
+	}
+	NSString *dataStr = [NSString stringWithFormat:@"%@:%@", username, [SFHFKeychainUtils getPasswordForUsername:username andServiceName:kServiceName error:[NSError alloc]]];
+	
+	//encode
+	NSData *encodeData = [dataStr dataUsingEncoding:NSUTF8StringEncoding];
+	char encodeArray[512];
+	
+	//set memory size
+	memset(encodeArray, '\0', sizeof(encodeArray));
+	
+	// Base64 Encode username and password
+	encode([encodeData length], (char *)[encodeData bytes], sizeof(encodeArray), encodeArray);
+	dataStr = [NSString stringWithCString:encodeArray length:strlen(encodeArray)];
+	NSString *authenticationString = [@"" stringByAppendingFormat:@"Basic %@", dataStr];
+	
+	//Add authentication header to request
+	[request addRequestHeader:@"Authorization" value:authenticationString];
+	[request start];
+	return YES;
+}
+
 //log out and clean up user authentication
 -(void)logout{
 	NSURL *url = [NSURL URLWithString:@"https://twitter.com/account/end_session.xml"];
@@ -154,7 +187,7 @@
 	[request setDidFinishSelector:@selector(requestDone:)];
 	[request setDidFailSelector:@selector(requestWentWrong:)];
 	
-	//TODO: pull username and password from keychain
+	//pull username and password from keychain
 	NSString *username = [userDefaults objectForKey:@"username"];
 	NSString *dataStr = [NSString stringWithFormat:@"%@:%@", username, [SFHFKeychainUtils getPasswordForUsername:username andServiceName:kServiceName error:[NSError alloc]]];
 	
