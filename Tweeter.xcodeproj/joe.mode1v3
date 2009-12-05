@@ -231,6 +231,8 @@
 			<key>Layout</key>
 			<array>
 				<dict>
+					<key>BecomeActive</key>
+					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -311,8 +313,6 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -330,7 +330,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>D8B246AA10AD2D6F004BC227</string>
+										<string>D8E5C7DC10CAD77800446335</string>
 										<key>history</key>
 										<array>
 											<string>D82D0C2310A9D8FF00020AB1</string>
@@ -343,10 +343,10 @@
 											<string>D875D93A10AB732900331144</string>
 											<string>D875D93B10AB732900331144</string>
 											<string>D875D9BC10AB7B4200331144</string>
-											<string>D875D9EA10ABBACD00331144</string>
-											<string>D875DAAA10ABD8C100331144</string>
-											<string>D8B2467C10AD2C1C004BC227</string>
-											<string>D8B2467E10AD2C1C004BC227</string>
+											<string>D825DB8510BA3FDE0095B135</string>
+											<string>D80592CA10CA2D64004FEA95</string>
+											<string>D80592CB10CA2D64004FEA95</string>
+											<string>D8E5C7DB10CAD77800446335</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -404,9 +404,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>D8B246AB10AD2D6F004BC227</string>
+				<string>D8E5C7DD10CAD77800446335</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>D8B246AC10AD2D6F004BC227</string>
+				<string>D8E5C7DE10CAD77800446335</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -625,7 +625,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>D82D0BB710A9D17400020AB1</string>
-				<string>D8B246AD10AD2D6F004BC227</string>
+				<string>D8E5C7DF10CAD77800446335</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>

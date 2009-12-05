@@ -350,14 +350,13 @@ int encode(unsigned s_len, char *src, unsigned d_len, char *dst)
 	NSLog(@"Username/password stored in keychain");
 	[userDefaults setObject:user forKey:@"username"];
 	authenticated = TRUE;
-	//[[NSNotificationCenter defaultCenter] postNotification:kLoginSuccess];
+	[[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:kLoginSuccess object:nil]];
 }
 -(void)authFailed:(ASIHTTPRequest *)request
 {
 	NSError *error = [request error];
 	NSLog(@"Error: %@", error);
-	//UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Invalid login" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
-	//[alert show];
+	[[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:kLoginSuccess object:nil]];
 }
 
 - (void)requestDone:(ASIHTTPRequest *)request
