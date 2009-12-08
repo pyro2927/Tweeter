@@ -191,7 +191,7 @@
 	[request setDidFailSelector:@selector(requestWentWrong:)];
 	
 	//pull username and password from keychain
-	NSString *username = [userDefaults objectForKey:@"username"];
+	NSString *username = [userDefaults objectForKey:kTweeterUser];
 	NSString *dataStr = [NSString stringWithFormat:@"%@:%@", username, [SFHFKeychainUtils getPasswordForUsername:username andServiceName:kServiceName error:[NSError alloc]]];
 	
 	//encode
@@ -384,7 +384,7 @@ int encode(unsigned s_len, char *src, unsigned d_len, char *dst)
 	//Once authentication is successful, store username into keyChain
 	[SFHFKeychainUtils storeUsername:user andPassword:pass forServiceName:kServiceName updateExisting:FALSE error:[NSError alloc]];
 	NSLog(@"Username/password stored in keychain");
-	[userDefaults setObject:user forKey:@"username"];
+	[userDefaults setObject:user forKey:kTweeterUser];
 	authenticated = TRUE;
 	[[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:kLoginSuccess object:nil]];
 }
