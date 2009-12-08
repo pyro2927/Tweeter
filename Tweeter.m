@@ -148,6 +148,8 @@
 	if (!username) {
 		return NO;
 	}
+	return YES;
+	/*
 	NSString *dataStr = [NSString stringWithFormat:@"%@:%@", username, [SFHFKeychainUtils getPasswordForUsername:username andServiceName:kServiceName error:[NSError alloc]]];
 	
 	//encode
@@ -166,6 +168,7 @@
 	[request addRequestHeader:@"Authorization" value:authenticationString];
 	[request start];
 	return YES;
+	 */
 }
 
 //log out and clean up user authentication
