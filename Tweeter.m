@@ -145,7 +145,7 @@
 	[request setDidFailSelector:@selector(authFailed:)];
 	
 	NSString *username = [userDefaults objectForKey:kTweeterUser];
-	if (!username || ![SFHFKeychainUtils getPasswordForUsername:username andServiceName:kServiceName error:[NSError alloc]]) {
+	if (!username) {
 		return NO;
 	}
 	NSString *dataStr = [NSString stringWithFormat:@"%@:%@", username, [SFHFKeychainUtils getPasswordForUsername:username andServiceName:kServiceName error:[NSError alloc]]];
