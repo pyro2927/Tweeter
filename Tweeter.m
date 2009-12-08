@@ -144,7 +144,7 @@
 	[request setDidFinishSelector:@selector(authDone:)];
 	[request setDidFailSelector:@selector(authFailed:)];
 	
-	NSString *username = [userDefaults objectForKey:@"username"];
+	NSString *username = [userDefaults objectForKey:kTweeterUser];
 	if (!username || ![SFHFKeychainUtils getPasswordForUsername:username andServiceName:kServiceName error:[NSError alloc]]) {
 		return NO;
 	}
@@ -176,6 +176,9 @@
 	[request setDidFinishSelector:@selector(requestDone:)];
 	[request setDidFailSelector:@selector(requestFailed:)];
 	[request start];
+	NSString *username = [userDefaults objectForKey:kTweeterUser];
+	[userDefaults removeObjectForKey:kTweeterUser];
+	[SFHFKeychainUtils deleteItemForUsername:username andServiceName:kServiceName error:[NSError alloc]];
 }
 
 //Posts to twitter

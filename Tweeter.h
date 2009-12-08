@@ -12,6 +12,7 @@
 #import "CCJSONParser.h"
 
 #define kServiceName	@"Tweeter"
+#define kTweeterUser	@"Tweeter_Username"
 #define kLoginSuccess	@"Logged in Successfully"
 #define kError			@"Tweeter Error"
 #define kDictTweet		@"DictTweet"
