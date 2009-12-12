@@ -231,8 +231,6 @@
 			<key>Layout</key>
 			<array>
 				<dict>
-					<key>BecomeActive</key>
-					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -279,7 +277,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>5</integer>
+									<integer>6</integer>
 									<integer>4</integer>
 									<integer>1</integer>
 									<integer>0</integer>
@@ -321,7 +319,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>Tweeter.h</string>
+								<string>Tweeter.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -329,14 +327,13 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>Tweeter.h</string>
+										<string>Tweeter.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>D86904D510D33925003FA64F</string>
+										<string>D805F39F10D429E5000C884B</string>
 										<key>history</key>
 										<array>
-											<string>D82D0C2310A9D8FF00020AB1</string>
 											<string>D82D0C2410A9D8FF00020AB1</string>
 											<string>D82D0C2510A9D8FF00020AB1</string>
 											<string>D8FBCFAC10AA613A00E92E67</string>
@@ -348,9 +345,8 @@
 											<string>D875D9BC10AB7B4200331144</string>
 											<string>D80592CB10CA2D64004FEA95</string>
 											<string>D8E5C7E410CAD8E400446335</string>
-											<string>D829582610CE315F00146D93</string>
-											<string>D86904D310D33925003FA64F</string>
-											<string>D86904D410D33925003FA64F</string>
+											<string>D85B38F210D33FAF0075D151</string>
+											<string>D805F39E10D429E5000C884B</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -408,9 +404,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>D86904D010D338A9003FA64F</string>
+				<string>D805F3A010D429E5000C884B</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>D86904D110D338A9003FA64F</string>
+				<string>D805F3A110D429E5000C884B</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -629,7 +625,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>D82D0BB710A9D17400020AB1</string>
-				<string>D86904D210D338A9003FA64F</string>
+				<string>D805F3A210D429E5000C884B</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>
