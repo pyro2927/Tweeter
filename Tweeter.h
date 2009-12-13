@@ -29,6 +29,7 @@
 
 -(id)init;
 -(void)loginWithUsername:(NSString *)username password:(NSString *)password;
+-(BOOL)hasCredentials;
 -(void)logout;
 -(void)post:(NSString *)tweet;
 
