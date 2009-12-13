@@ -181,7 +181,7 @@
 	[request start];
 	NSString *username = [userDefaults objectForKey:kTweeterUser];
 	[userDefaults removeObjectForKey:kTweeterUser];
-	[SFHFKeychainUtils deleteItemForUsername:username andServiceName:kServiceName error:nil];
+	[SFHFKeychainUtils deleteItemForUsername:username andServiceName:kServiceName error:[[NSError alloc] init]];
 }
 
 //Posts to twitter
@@ -195,7 +195,7 @@
 	
 	//pull username and password from keychain
 	NSString *username = [userDefaults objectForKey:kTweeterUser];
-	NSString *dataStr = [NSString stringWithFormat:@"%@:%@", username, [SFHFKeychainUtils getPasswordForUsername:username andServiceName:kServiceName error:nil]];
+	NSString *dataStr = [NSString stringWithFormat:@"%@:%@", username, [SFHFKeychainUtils getPasswordForUsername:username andServiceName:kServiceName error:[[NSError alloc] init]]];
 	
 	//encode
 	NSData *encodeData = [dataStr dataUsingEncoding:NSUTF8StringEncoding];
