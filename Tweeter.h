@@ -14,6 +14,8 @@
 #define kServiceName	@"Tweeter"
 #define kTweeterUser	@"Tweeter_Username"
 #define kLoginSuccess	@"Logged in Successfully"
+#define kPostSuccess	@"Posted Successfully"
+#define kPostError		@"Post Error"
 #define kError			@"Tweeter Error"
 #define kDictTweet		@"DictTweet"
 #define kDictDate		@"DictDate"

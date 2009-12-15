@@ -190,8 +190,8 @@
 	NSURL *url = [NSURL URLWithString:@"https://twitter.com/statuses/update.xml"];
 	ASIFormDataRequest *request = [[[ASIFormDataRequest alloc] initWithURL:url] autorelease];
 	[request setDelegate:self];
-	[request setDidFinishSelector:@selector(requestDone:)];
-	[request setDidFailSelector:@selector(requestWentWrong:)];
+	[request setDidFinishSelector:@selector(postDone:)];
+	[request setDidFailSelector:@selector(postFailed:)];
 	
 	//pull username and password from keychain
 	NSString *username = [userDefaults objectForKey:kTweeterUser];
@@ -402,6 +402,18 @@ int encode(unsigned s_len, char *src, unsigned d_len, char *dst)
 {
 	NSString *response = [request responseString];
 	NSLog(@"Response: %@", response);
+}
+
+-(void)postDone:(ASIHTTPRequest *)request{
+	NSString *response = [request responseString];
+	NSLog(@"Response: %@", response);
+	[[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:kPostSuccess object:nil]];
+}
+
+-(void)postFailed:(ASIHTTPRequest *)request{
+	NSString *response = [request responseString];
+	NSLog(@"Response: %@", response);
+	[[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:kPostError object:nil]];
 }
 
 - (void)requestWentWrong:(ASIHTTPRequest *)request
