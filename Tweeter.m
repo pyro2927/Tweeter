@@ -179,6 +179,10 @@
 	NSError *error = nil;
 	NSString *dataStr = [NSString stringWithFormat:@"%@:%@", username, [SFHFKeychainUtils getPasswordForUsername:username andServiceName:kServiceName error:&error]];
 	
+	if (!self.authenticated) {
+		[self loginWithUsername:username password:[SFHFKeychainUtils getPasswordForUsername:username andServiceName:kServiceName error:&error]];
+	}
+	
 	//encode
 	NSData *encodeData = [dataStr dataUsingEncoding:NSUTF8StringEncoding];
 	char encodeArray[512];
