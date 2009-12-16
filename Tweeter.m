@@ -385,7 +385,7 @@ int encode(unsigned s_len, char *src, unsigned d_len, char *dst)
 	NSLog(@"Response: %@", response);
 	self.results = (NSDictionary *)[CCJSONParser objectFromJSON:response];
 	//Once authentication is successful, store username into keyChain
-	[SFHFKeychainUtils storeUsername:user andPassword:pass forServiceName:kServiceName updateExisting:FALSE error:nil];
+	[SFHFKeychainUtils storeUsername:user andPassword:pass forServiceName:kServiceName updateExisting:FALSE error:[[NSError alloc] init]];
 	NSLog(@"Username/password stored in keychain");
 	[userDefaults setObject:user forKey:kTweeterUser];
 	authenticated = TRUE;
